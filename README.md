@@ -14,7 +14,7 @@ For more information on the Teach project please see:
 https://www.worldbank.org/en/topic/education/brief/teach-helping-countries-track-and-improve-teaching-quality
 
 ## Code Contained in this Directory
-Contain code related to the Teach project.  Specifically, some python code useful for creating video-clips
+The code in this directory contains python code useful for creating 15 minute video clips from the Teach video recordings of classrooms.  The 15 minute clips are then used by the Teach scorers to evaluate teacher pedagogical skills.
 
 The basic loop does the following:
 1.	Read the contents of a folder containing videos
@@ -24,3 +24,31 @@ The basic loop does the following:
 5.	Clip either 0,1,or 2 videos based on the length (if the video is at least 41 minutes long, it clips at 10-25 min through the video and 26-41 minutes.  If under 41 minutes, it clips between 10-25 minutes, and if under 25 minutes, it will skip the video
 6.	Produce 15 minute clips.
 7.	Save the video clips
+
+### Prerequisites
+
+The user will need a modern version of Python 3 installed on their machine.  In my opinion, the easiest way to install python is to download the Anaconda python distribution, which includes a number of pre-installed packages for data science.
+
+The link to download can be found here:
+
+https://www.anaconda.com/distribution/
+
+Once python 3 is installed, you will need the following packages:
+
+1. moviepy.editor # Import everything needed to edit video clips
+
+2. pathlib #import tool for dealing with files and paths
+
+3. IPython.display  #Allow showing video in python notebook
+
+4. os.path #some tools for navigating files and paths
+
+### Customization Required before Running
+
+The repo contains two files: the teach_video_slicer.py and the teach_video_slicer.ipynb.  The files are nearly identical, but the .ipynb is converted to be used in Jupyter notebooks, whereas the .py file can be read in any instance of python 3.
+
+I will provide instructions for the .py file, but the .ipynb file should proceed similarly.
+
+1. You will need to modify the directories in line 26, 27 to match your needs
+
+2. You will need to modify the test file path in line 38, based on your system
